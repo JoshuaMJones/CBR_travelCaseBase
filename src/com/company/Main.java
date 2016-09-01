@@ -19,6 +19,19 @@ public class Main {
         for(Case curCase : allCases.cases){
 
         }
+        //
+        //Change
+        //The
+        //Case
+        //Values
+        //So
+        //That
+        //They
+        //Are
+        //Preprocessed
+        //Into
+        //Numbers
+        //
 
         /*int testNum = 1;
         for(Cases.Case curCase : allCases.cases){
