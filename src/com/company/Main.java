@@ -10,15 +10,13 @@ public class Main {
         Cases allCases = new Cases();
         allCases.ReadCases();
 
-        allCases.giveStats();
+        //allCases.giveStats();
         //Need to input the actual case that we want to compare
         //Also need to figure out how we can make a case?
         Case inputCase = new Case();
 
         //Need to loops through and check against the case base and keep track of the best etc
-        for(Case curCase : allCases.cases){
-
-        }
+        allCases.compareAllCases(inputCase);
         //
         //Change
         //The
@@ -41,5 +39,8 @@ public class Main {
 
     }
 
+    private void test1(){
+        
+    }
 
 }
