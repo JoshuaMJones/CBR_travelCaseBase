@@ -55,6 +55,32 @@ public class Cases {
 
         return similarity/totalWeight;
     }
+
+    public void compareSimilarityTest(Case thisCase, Case otherCase){
+        double holidaySim = holidayTypeWeight*holidayTypeComparison(thisCase, otherCase);
+        double priceSim = priceWeight*priceComparison(thisCase, otherCase);
+        double personNumSim = personNumberWeight*personNumberComparison(thisCase, otherCase);
+        double regionSim = regionWeight*regionComparison(thisCase, otherCase);
+        double transportationSim = transportationWeight*transportationComparison(thisCase, otherCase);
+        double durationSim = durationWeight*durationComparison(thisCase, otherCase);
+        double seasonSim = seasonWeight*seasonComparison(thisCase, otherCase);
+        double accommodationSim = accomodationWeight*accomodationComparison(thisCase, otherCase);
+        System.out.println("Case: " + otherCase.journeyCode);
+        System.out.println("Holiday: " + otherCase.holidayType + " _ "  + holidaySim);
+        System.out.println("Price: " + otherCase.price + " _ "  + priceSim);
+        System.out.println("PeopleNum: " + otherCase.numPerson + " _ "  + personNumSim);
+        System.out.println("Region: " + otherCase.region + " _ "  + regionSim);
+        System.out.println("Transportation: " + otherCase.transportation + " _ "  + transportationSim);
+        System.out.println("Duration: " + otherCase.duration + " _ "  + durationSim);
+        System.out.println("Season: " + otherCase.season + " _ "  + seasonSim);
+        System.out.println("Accommodation: " + otherCase.accommodation + " _ " + accommodationSim);
+        double total = holidaySim + priceSim + personNumSim + regionSim + transportationSim +
+                durationSim + seasonSim + accommodationSim;
+        double totalW = total / totalWeight;
+        System.out.println("Total: " + totalW);
+
+        System.out.println("\n\n");
+    }
     //Plane, Car, Train, Coach,
     private double[][] transportSimilarities = {{1.0, 0.3, 0.5, 0.5},{0.3, 1.0, 0.6, 0.7},
             {0.5, 0.3, 1.0, 0.7},{0.3, 0.5, 0.7, 1.0}};

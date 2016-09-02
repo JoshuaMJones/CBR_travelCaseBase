@@ -31,16 +31,16 @@ public class Case implements Comparable<Case>{
 
     private int getTransportIndex(String type){
         if(type.equals("Plane")){
-            return 1;
+            return 0;
         }
         else if(type.equals("Car")){
-            return 2;
+            return 1;
         }
         else if(type.equals("Train")){
-            return 3;
+            return 2;
         }
         else{
-            return 4;
+            return 3;
         }
     }
     private int getSeasonIndex(String season){
@@ -123,7 +123,7 @@ public class Case implements Comparable<Case>{
     }
 
     public void printCase(){
-        System.out.println(journeyCode);
+        System.out.println("Case: " + journeyCode);
         System.out.println(holidayType);
         System.out.println(price);
         System.out.println(numPerson);
@@ -133,6 +133,7 @@ public class Case implements Comparable<Case>{
         System.out.println(season);
         System.out.println(accommodation);
         System.out.println(hotel);
+        System.out.println("similarity: " + similarity + "\n");
 
     }
 
