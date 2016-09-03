@@ -8,29 +8,10 @@ public class Main {
         allCases.ReadCases();
         //test1(allCases);
         //allCases.giveStats();
-        //Need to input the actual case that we want to compare
-        //Also need to figure out how we can make a case?
-
-        //Case inputCase = new Case();
-
-        //Need to loops through and check against the case base and keep track of the best etc
 
         //allCases.compareAllCases(inputCase);
 
         new MyGUI(allCases);
-        //
-        //Change
-        //The
-        //Case
-        //Values
-        //So
-        //That
-        //They
-        //Are
-        //Preprocessed
-        //Into
-        //Numbers
-        //
 
         /*int testNum = 1;
         for(Cases.Case curCase : allCases.cases){
