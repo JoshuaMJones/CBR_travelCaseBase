@@ -5,9 +5,6 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-/**
- * Created by ArO on 3/09/2016.
- */
 public class MyGUI {
     private TextArea caseDisplay;
 

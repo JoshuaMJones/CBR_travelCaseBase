@@ -1,8 +1,6 @@
 package com.company;
 
-/**
- * Created by ArO on 27/08/2016.
- */
+
 public class Case implements Comparable<Case>{
 
     protected int journeyCode;

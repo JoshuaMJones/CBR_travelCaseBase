@@ -16,7 +16,7 @@ public class Cases {
     String inputFile = "src\\com\\company\\TRAVEL.CSV";
 
 
-    //Need to add in something which compares the current case against all other cases
+
     public void compareAllCases(Case inputCase){
 
         for(Case curCase : cases){
@@ -30,14 +30,14 @@ public class Cases {
 
 
 
-    public double holidayTypeWeight = 1.0;
-    public double priceWeight = 1.0;
-    public double personNumberWeight = 1.0;
+    public double holidayTypeWeight = 5.0;
+    public double priceWeight = 2.0;
+    public double personNumberWeight = 3.0;
     public double regionWeight = 1.0;
     public double transportationWeight = 1.0;
-    public double durationWeight = 1.0;
-    public double seasonWeight = 1.0;
-    public double accomodationWeight = 1.0;
+    public double durationWeight = 2.0;
+    public double seasonWeight = 3.0;
+    public double accomodationWeight = 2.0;
     public double totalWeight = holidayTypeWeight + priceWeight + personNumberWeight +
             regionWeight + transportationWeight + durationWeight + seasonWeight + accomodationWeight;
 
@@ -82,10 +82,10 @@ public class Cases {
         System.out.println("\n\n");
     }
     //Plane, Car, Train, Coach,
-    private double[][] transportSimilarities = {{1.0, 0.3, 0.5, 0.5},{0.3, 1.0, 0.6, 0.7},
-            {0.5, 0.3, 1.0, 0.7},{0.3, 0.5, 0.7, 1.0}};
+    private double[][] transportSimilarities = {{1.0, 0.4, 0.6, 0.5},{0.4, 1.0, 0.6, 0.5},
+            {0.6, 0.4, 1.0, 0.7},{0.4, 0.6, 0.8, 1.0}};
 
-
+    //Done
     private double holidayTypeComparison(Case thisCase, Case otherCase){
         //Bathing, City, Wandering
         //Active, Recreation, Skiing
@@ -108,7 +108,7 @@ public class Cases {
         //THis is to say that, if the difference in prices is more than what they want, x
         // x* relevanceScale then it will be deemed unsimilar, otherwise use a cos function
         //to determine similarity
-        double relevanceScale = 0.3;
+        double relevanceScale = 0.4;
         int difference = otherCase.price - thisCase.price;
         if(difference <= 0){
             return 1.0;
@@ -128,11 +128,11 @@ public class Cases {
         int difference = Math.abs(otherCase.numPerson - thisCase.numPerson);
         int leeWay = 3;
         if(difference <= leeWay){
-            return 1 - (1.0 * difference / (leeWay + 1));
+            return 1 - 0.2*(1.0 * difference / (leeWay + 1));
         }
-        return 0.0;
+        return 0.2;
     }
-
+    //Done
     private double regionComparison(Case thisCase, Case otherCase){
         //if they are the same then 1.0
         if(thisCase.region.equals(otherCase.region)){
@@ -145,35 +145,38 @@ public class Cases {
     private double transportationComparison(Case thisCase, Case otherCase){
         return transportSimilarities[thisCase.transportationIndex][otherCase.transportationIndex];
     }
-    //TODO perhaps make this scale with duration length?
+    //Done
     private double durationComparison(Case thisCase, Case otherCase){
         //Min: 3
         //Max: 21
+        //if 6 or more days different, will return 0.3, otherwise is linearly
+        //scaled from 1 to 0.3
         int difference = Math.abs(otherCase.duration - thisCase.duration);
         int leeWay = 5;
         if(difference <= leeWay){
-            return 1 - (1.0 * difference / (leeWay + 1));
+            return 1 - 0.7*(1.0 * difference / (leeWay + 1));
         }
-        return 0.0;
+        return 0.3;
     }
-    //TODO perhaps fiddle with the values returned
+    //Done
     private double seasonComparison(Case thisCase, Case otherCase){
         //Hard coded:
         //If they are the same month then they are 1.0 similar
-        //if they are adjacent months, 0.7 similar, if they are 1 month apart, 0.4 similar
+        //if they are adjacent months, 0.8 similar, if they are 1 month apart, 0.6 similar
         //Otherwise they are not similar
         int difference = Math.abs(thisCase.seasonIndex - otherCase.seasonIndex);
         if(difference == 0){
             return 1.0;
         }
         if(difference == 1 || difference == 11){
-            return 0.7;
+            return 0.8;
         }
         if(difference == 2 || difference == 10){
-            return 0.4;
+            return 0.6;
         }
-        return 0.1;
+        return 0.4;
     }
+    //Done
     private double accomodationComparison(Case thisCase, Case otherCase){
         //Assume that higher ranked accomodation is always more preferred.
         //index will be between 0-5
@@ -181,10 +184,10 @@ public class Cases {
             return 1.0;
         }
         int difference = Math.abs(thisCase.accommodationIndex - otherCase.accommodationIndex);
-        return 1 - (difference/5);
+        return 1 - 0.7*(difference/5);
     }
 
-
+    //These are for reading in the cases from file
     public void ReadCases(){
         CSVReader readThisShit;
         String[] curLine;
@@ -259,6 +262,7 @@ public class Cases {
         return secondStrip;
     }
 
+    //This is all just used for seeing what values are in the case base
     public void giveStats() {
         ArrayList<String> holidayTypes = new ArrayList<String>();
         ArrayList<String> regions = new ArrayList<String>();

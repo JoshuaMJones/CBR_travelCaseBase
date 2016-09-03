@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df4e6b2c-a300-4f3c-a9b9-c9eaebac9426" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/cbr/com/company/MyGUI$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/cbr/com/company/MyGUI.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/Case.java" afterPath="$PROJECT_DIR$/src/com/company/Case.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/Cases.java" afterPath="$PROJECT_DIR$/src/com/company/Cases.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/MyGUI.java" afterPath="$PROJECT_DIR$/src/com/company/MyGUI.java" />
     </list>
     <ignored path="CBR.iws" />
@@ -29,30 +28,40 @@
       <file leaf-file-name="Case.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/Case.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="499">
-              <caret line="159" column="45" selection-start-line="159" selection-start-column="45" selection-end-line="159" selection-end-column="45" />
+            <state relative-caret-position="34">
+              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
               <folding>
+                <element signature="method#setupIndices#0;class#Case#0" expanded="false" />
+                <element signature="method#getTransportIndex#0;class#Case#0" expanded="false" />
                 <element signature="method#getSeasonIndex#0;class#Case#0" expanded="false" />
                 <element signature="method#getAccomodationIndex#0;class#Case#0" expanded="false" />
                 <element signature="method#getHolidayIndex#0;class#Case#0" expanded="false" />
+                <element signature="method#printCase#0;class#Case#0" expanded="false" />
+                <element signature="method#compareTo#0;class#Case#0" expanded="false" />
+                <element signature="method#toString#0;class#Case#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Cases.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Cases.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/Cases.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="388" column="0" selection-start-line="388" selection-start-column="0" selection-end-line="410" selection-end-column="3" />
+            <state relative-caret-position="187">
+              <caret line="87" column="10" selection-start-line="87" selection-start-column="10" selection-end-line="87" selection-end-column="10" />
               <folding>
+                <element signature="method#compareAllCases#0;class#Cases#0" expanded="false" />
+                <element signature="method#compareSimilarity#0;class#Cases#0" expanded="false" />
+                <element signature="method#compareSimilarityTest#0;class#Cases#0" expanded="false" />
                 <element signature="method#holidayTypeComparison#0;class#Cases#0" expanded="false" />
                 <element signature="method#priceComparison#0;class#Cases#0" expanded="false" />
                 <element signature="method#personNumberComparison#0;class#Cases#0" expanded="false" />
                 <element signature="method#regionComparison#0;class#Cases#0" expanded="false" />
+                <element signature="method#transportationComparison#0;class#Cases#0" expanded="false" />
                 <element signature="method#durationComparison#0;class#Cases#0" expanded="false" />
                 <element signature="method#seasonComparison#0;class#Cases#0" expanded="false" />
                 <element signature="method#accomodationComparison#0;class#Cases#0" expanded="false" />
+                <element signature="method#ReadCases#0;class#Cases#0" expanded="false" />
                 <element signature="method#printThisLine#0;class#Cases#0" expanded="false" />
                 <element signature="method#cleanString#0;class#Cases#0" expanded="false" />
                 <element signature="method#giveStats#0;class#Cases#0" expanded="false" />
@@ -69,7 +78,7 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
+            <state relative-caret-position="-95">
               <caret line="19" column="26" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
               <folding>
                 <element signature="method#test1#0;class#Main#0" expanded="false" />
@@ -78,11 +87,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MyGUI.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MyGUI.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/MyGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="349">
-              <caret line="35" column="92" selection-start-line="35" selection-start-column="92" selection-end-line="35" selection-end-column="92" />
+            <state relative-caret-position="102">
+              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -110,10 +119,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/company/Cases.java" />
         <option value="$PROJECT_DIR$/src/com/company/Main.java" />
         <option value="$PROJECT_DIR$/src/com/company/Case.java" />
         <option value="$PROJECT_DIR$/src/com/company/MyGUI.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Cases.java" />
       </list>
     </option>
   </component>
@@ -522,7 +531,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -536,9 +545,14 @@
         <state relative-caret-position="2295">
           <caret line="135" column="60" selection-start-line="135" selection-start-column="60" selection-end-line="135" selection-end-column="60" />
           <folding>
+            <element signature="method#setupIndices#0;class#Case#0" expanded="false" />
+            <element signature="method#getTransportIndex#0;class#Case#0" expanded="false" />
             <element signature="method#getSeasonIndex#0;class#Case#0" expanded="false" />
             <element signature="method#getAccomodationIndex#0;class#Case#0" expanded="false" />
             <element signature="method#getHolidayIndex#0;class#Case#0" expanded="false" />
+            <element signature="method#printCase#0;class#Case#0" expanded="false" />
+            <element signature="method#compareTo#0;class#Case#0" expanded="false" />
+            <element signature="method#toString#0;class#Case#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -548,13 +562,18 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="method#compareAllCases#0;class#Cases#0" expanded="false" />
+            <element signature="method#compareSimilarity#0;class#Cases#0" expanded="false" />
+            <element signature="method#compareSimilarityTest#0;class#Cases#0" expanded="false" />
             <element signature="method#holidayTypeComparison#0;class#Cases#0" expanded="false" />
             <element signature="method#priceComparison#0;class#Cases#0" expanded="false" />
             <element signature="method#personNumberComparison#0;class#Cases#0" expanded="false" />
             <element signature="method#regionComparison#0;class#Cases#0" expanded="false" />
+            <element signature="method#transportationComparison#0;class#Cases#0" expanded="false" />
             <element signature="method#durationComparison#0;class#Cases#0" expanded="false" />
             <element signature="method#seasonComparison#0;class#Cases#0" expanded="false" />
             <element signature="method#accomodationComparison#0;class#Cases#0" expanded="false" />
+            <element signature="method#ReadCases#0;class#Cases#0" expanded="false" />
             <element signature="method#printThisLine#0;class#Cases#0" expanded="false" />
             <element signature="method#cleanString#0;class#Cases#0" expanded="false" />
             <element signature="method#giveStats#0;class#Cases#0" expanded="false" />
@@ -582,9 +601,14 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="method#setupIndices#0;class#Case#0" expanded="false" />
+            <element signature="method#getTransportIndex#0;class#Case#0" expanded="false" />
             <element signature="method#getSeasonIndex#0;class#Case#0" expanded="false" />
             <element signature="method#getAccomodationIndex#0;class#Case#0" expanded="false" />
             <element signature="method#getHolidayIndex#0;class#Case#0" expanded="false" />
+            <element signature="method#printCase#0;class#Case#0" expanded="false" />
+            <element signature="method#compareTo#0;class#Case#0" expanded="false" />
+            <element signature="method#toString#0;class#Case#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -594,13 +618,18 @@
         <state relative-caret-position="85">
           <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
           <folding>
+            <element signature="method#compareAllCases#0;class#Cases#0" expanded="false" />
+            <element signature="method#compareSimilarity#0;class#Cases#0" expanded="false" />
+            <element signature="method#compareSimilarityTest#0;class#Cases#0" expanded="false" />
             <element signature="method#holidayTypeComparison#0;class#Cases#0" expanded="false" />
             <element signature="method#priceComparison#0;class#Cases#0" expanded="false" />
             <element signature="method#personNumberComparison#0;class#Cases#0" expanded="false" />
             <element signature="method#regionComparison#0;class#Cases#0" expanded="false" />
+            <element signature="method#transportationComparison#0;class#Cases#0" expanded="false" />
             <element signature="method#durationComparison#0;class#Cases#0" expanded="false" />
             <element signature="method#seasonComparison#0;class#Cases#0" expanded="false" />
             <element signature="method#accomodationComparison#0;class#Cases#0" expanded="false" />
+            <element signature="method#ReadCases#0;class#Cases#0" expanded="false" />
             <element signature="method#printThisLine#0;class#Cases#0" expanded="false" />
             <element signature="method#cleanString#0;class#Cases#0" expanded="false" />
             <element signature="method#giveStats#0;class#Cases#0" expanded="false" />
@@ -631,33 +660,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Cases.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/MyGUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="388" column="0" selection-start-line="388" selection-start-column="0" selection-end-line="410" selection-end-column="3" />
+        <state relative-caret-position="102">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding>
-            <element signature="method#holidayTypeComparison#0;class#Cases#0" expanded="false" />
-            <element signature="method#priceComparison#0;class#Cases#0" expanded="false" />
-            <element signature="method#personNumberComparison#0;class#Cases#0" expanded="false" />
-            <element signature="method#regionComparison#0;class#Cases#0" expanded="false" />
-            <element signature="method#durationComparison#0;class#Cases#0" expanded="false" />
-            <element signature="method#seasonComparison#0;class#Cases#0" expanded="false" />
-            <element signature="method#accomodationComparison#0;class#Cases#0" expanded="false" />
-            <element signature="method#printThisLine#0;class#Cases#0" expanded="false" />
-            <element signature="method#cleanString#0;class#Cases#0" expanded="false" />
-            <element signature="method#giveStats#0;class#Cases#0" expanded="false" />
-            <element signature="method#addAccom#0;class#Cases#0" expanded="false" />
-            <element signature="method#addMonth#0;class#Cases#0" expanded="false" />
-            <element signature="method#addTransportation#0;class#Cases#0" expanded="false" />
-            <element signature="method#addRegion#0;class#Cases#0" expanded="false" />
-            <element signature="method#addType#0;class#Cases#0" expanded="false" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
+        <state relative-caret-position="-95">
           <caret line="19" column="26" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
           <folding>
             <element signature="method#test1#0;class#Main#0" expanded="false" />
@@ -667,22 +682,46 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Case.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="499">
-          <caret line="159" column="45" selection-start-line="159" selection-start-column="45" selection-end-line="159" selection-end-column="45" />
+        <state relative-caret-position="34">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding>
+            <element signature="method#setupIndices#0;class#Case#0" expanded="false" />
+            <element signature="method#getTransportIndex#0;class#Case#0" expanded="false" />
             <element signature="method#getSeasonIndex#0;class#Case#0" expanded="false" />
             <element signature="method#getAccomodationIndex#0;class#Case#0" expanded="false" />
             <element signature="method#getHolidayIndex#0;class#Case#0" expanded="false" />
+            <element signature="method#printCase#0;class#Case#0" expanded="false" />
+            <element signature="method#compareTo#0;class#Case#0" expanded="false" />
+            <element signature="method#toString#0;class#Case#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/MyGUI.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/Cases.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="35" column="92" selection-start-line="35" selection-start-column="92" selection-end-line="35" selection-end-column="92" />
+        <state relative-caret-position="187">
+          <caret line="87" column="10" selection-start-line="87" selection-start-column="10" selection-end-line="87" selection-end-column="10" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="method#compareAllCases#0;class#Cases#0" expanded="false" />
+            <element signature="method#compareSimilarity#0;class#Cases#0" expanded="false" />
+            <element signature="method#compareSimilarityTest#0;class#Cases#0" expanded="false" />
+            <element signature="method#holidayTypeComparison#0;class#Cases#0" expanded="false" />
+            <element signature="method#priceComparison#0;class#Cases#0" expanded="false" />
+            <element signature="method#personNumberComparison#0;class#Cases#0" expanded="false" />
+            <element signature="method#regionComparison#0;class#Cases#0" expanded="false" />
+            <element signature="method#transportationComparison#0;class#Cases#0" expanded="false" />
+            <element signature="method#durationComparison#0;class#Cases#0" expanded="false" />
+            <element signature="method#seasonComparison#0;class#Cases#0" expanded="false" />
+            <element signature="method#accomodationComparison#0;class#Cases#0" expanded="false" />
+            <element signature="method#ReadCases#0;class#Cases#0" expanded="false" />
+            <element signature="method#printThisLine#0;class#Cases#0" expanded="false" />
+            <element signature="method#cleanString#0;class#Cases#0" expanded="false" />
+            <element signature="method#giveStats#0;class#Cases#0" expanded="false" />
+            <element signature="method#addAccom#0;class#Cases#0" expanded="false" />
+            <element signature="method#addMonth#0;class#Cases#0" expanded="false" />
+            <element signature="method#addTransportation#0;class#Cases#0" expanded="false" />
+            <element signature="method#addRegion#0;class#Cases#0" expanded="false" />
+            <element signature="method#addType#0;class#Cases#0" expanded="false" />
           </folding>
         </state>
       </provider>
