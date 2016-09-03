@@ -12,16 +12,16 @@ public class MyGUI {
     private TextArea caseDisplay;
 
     public MyGUI(Cases caseBase){
-        JFrame guiFrame = new JFrame();  //make sure the program exits when the frame closes
+        JFrame guiFrame = new JFrame();
         guiFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         guiFrame.setTitle("Case Based Reasoner - Josh Jones");
-        int frameWidth = 400, frameHeight = 400, ourCaseHeight = 130;
+        int frameWidth = 400, frameHeight = 450, ourCaseHeight = 130;
         guiFrame.setSize(frameWidth,frameHeight);
 
-        //This will center the JFrame in the middle of the screen
+
         guiFrame.setLocationRelativeTo(null);
 
-        //Options for the Combo Boxes
+
         String[] holidayTypeOptions = {"Active", "Bathing", "City", "Education",
                 "Language", "Recreation", "Skiing", "Wandering"};
 
@@ -110,10 +110,7 @@ public class MyGUI {
 
         JButton caseFindBut = new JButton("Find Relevant Cases");
 
-        //The ActionListener class is used to handle the
-        // event that happens when the user clicks the button.
-        // As there is not a lot that needs to happen we can
-        // define an anonymous inner class to make the code simpler.
+
         caseFindBut.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent event) {
@@ -124,29 +121,38 @@ public class MyGUI {
                     caseFindBut.setText("Enter New Case");
 
                     //set up the input case here
-                    int curPrice = 1;
-                    int curNumPerson = 1;
-                    int curDuration = 1;
-                    int numberOfCases = 10;
+                    int curPrice, curNumPerson, curDuration, numberOfCases;
                     try{
                         curPrice = Integer.parseInt(priceField.getText().toString());
+                        if(curPrice < 0){
+                            throw new Exception("bad price number");
+                        }
                     }catch(Exception e){
-
+                        curPrice = 500;
                     }
                     try{
                         curNumPerson = Integer.parseInt(personField.getText().toString());
+                        if(curNumPerson < 0){
+                            throw new Exception("bad person number");
+                        }
                     }catch(Exception e){
-
+                        curNumPerson = 1;
                     }
                     try{
                         curDuration = Integer.parseInt(durationField.getText().toString());
+                        if(curDuration < 0){
+                            throw new Exception("bad duration number");
+                        }
                     }catch(Exception e){
-
+                        curDuration = 3;
                     }
                     try{
                         numberOfCases = Integer.parseInt(numCasesField.getText().toString());
+                        if(numberOfCases < 0 || numberOfCases > 1024){
+                            throw new Exception("bad case number");
+                        }
                     }catch(Exception e){
-
+                        numberOfCases = 10;
                     }
 
                     Case inputCase = new Case();
@@ -172,6 +178,7 @@ public class MyGUI {
 
                     thisCaseArea.setText(inputCase.toString());
                     relevantCasesArea.setText(otherCases);
+                    relevantCasesArea.setCaretPosition(0);
 
                 }else{
 
@@ -181,13 +188,12 @@ public class MyGUI {
             }
         });
 
-        //The JFrame uses the BorderLayout layout manager.
-        // Put the two JPanels and JButton in different areas.
+
         guiFrame.add(casePanel, BorderLayout.NORTH);
         guiFrame.add(relevantPanel, BorderLayout.CENTER);
         guiFrame.add(caseFindBut,BorderLayout.SOUTH);
 
-        //make sure the JFrame is visible
+
         guiFrame.setVisible(true);
     }
 }
