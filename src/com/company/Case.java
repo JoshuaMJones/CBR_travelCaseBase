@@ -144,4 +144,28 @@ public class Case implements Comparable<Case>{
         }
         return this.similarity < other.similarity ? 1 : -1;
     }
+
+    @Override
+    public String toString(){
+        String output = "";
+        if(journeyCode != 0){
+            output += "Journey Code: " + journeyCode + "\n";
+        }
+        output += "Holiday Type: " + holidayType + "\n";
+        output += "Price: " + price + "\n";
+        output += "Number of People: " + numPerson + "\n";
+        output += "Region: " + region + "\n";
+        output += "Transportation: " + transportation + "\n";
+        output += "Duration: " + duration + "\n";
+        output += "Season: " + season + "\n";
+        output += "Accomodation: " + accommodation + "\n";
+        if(hotel != null){
+            output +="Hotel: " + hotel + "\n";
+        }
+        if(similarity != 0){
+            output += "Similarity: " + similarity + "\n";
+        }
+
+        return output;
+    }
 }

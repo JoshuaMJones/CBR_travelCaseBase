@@ -17,7 +17,7 @@ public class Main {
 
         //allCases.compareAllCases(inputCase);
 
-        new MyGUI();
+        new MyGUI(allCases);
         //
         //Change
         //The
