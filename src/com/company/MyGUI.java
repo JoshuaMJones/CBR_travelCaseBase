@@ -25,15 +25,15 @@ public class MyGUI {
         String[] holidayTypeOptions = {"Active", "Bathing", "City", "Education",
                 "Language", "Recreation", "Skiing", "Wandering"};
 
-        String[] regions = {"Egypt", "Cairo", "Belgium", "Bulgaria", "Bornholm", "Fano", "Lolland", "Allgaeu",
-                "Alps", "Bavaria", "ErzGebirge", "Harz", "NorthSea", "BalticSea", "BlackForest",
-                "Thuringia", "Atlantic", "CotedAzur", "Corsica", "Normandy", "Brittany",
-                "Attica", "Chalkidiki", "Corfu", "Crete", "Rhodes", "England", "Ireland",
-                "Scotland", "Wales", "Holland", "AdriaticSea", "LakeGarda", "Riviera", "Tyrol",
-                "Malta", "Carinthia", "SalzbergerLand", "Styria", "Algarve", "Madeira", "Sweden",
-                "CostaBlanca", "CostaBrava", "Fuerteventura", "GranCanaria", "Ibiza", "Mallorca",
-                "Teneriffe", "GiantMountains", "TurkishAegeanSea", "TurkishRiviera", "Tunisia",
-                "Balaton", "Denmark", "Poland", "Slowakei", "Czechia", "France"};
+        String[] regions = {"AdriaticSea","Allgaeu","Algarve","Alps","Atlantic","Attica",
+                "Balaton","Bavaria","BalticSea", "Belgium","BlackForest", "Bornholm",
+                "Brittany","Bulgaria", "Cairo","Carinthia","Chalkidiki", "Corfu","Corsica",
+                "CostaBlanca","CostaBrava", "CotedAzur","Crete","Czechia","Denmark","Egypt",
+                "England","ErzGebirge", "Fano","France","Fuerteventura", "GiantMountains",
+                "GranCanaria", "Harz","Holland","Ibiza","Ireland","LakeGarda", "Lolland",
+                "Madeira","Malta","Mallorca","Normandy", "NorthSea", "Poland","Riviera",
+                "Rhodes", "SalzbergerLand","Scotland","Slowakei","Styria","Sweden", "Teneriffe",
+                "Thuringia","Tunisia","TurkishAegeanSea", "TurkishRiviera", "Tyrol", "Wales"};
 
         String[] transportation = {"Car", "Coach", "Plane", "Train"};
 
