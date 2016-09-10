@@ -128,7 +128,7 @@ public class Cases {
         int difference = Math.abs(otherCase.numPerson - thisCase.numPerson);
         int leeWay = 3;
         if(difference <= leeWay){
-            return 1 - 0.2*(1.0 * difference / (leeWay + 1));
+            return 1 - 0.5*(1.0 * difference / (leeWay + 1));
         }
         return 0.2;
     }

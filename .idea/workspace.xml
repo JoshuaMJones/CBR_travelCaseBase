@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df4e6b2c-a300-4f3c-a9b9-c9eaebac9426" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/Main.java" afterPath="$PROJECT_DIR$/src/com/company/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/Cases.java" afterPath="$PROJECT_DIR$/src/com/company/Cases.java" />
     </list>
     <ignored path="CBR.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -42,18 +43,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Cases.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Cases.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/Cases.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="731">
-              <caret line="143" column="10" selection-start-line="143" selection-start-column="10" selection-end-line="143" selection-end-column="10" />
+            <state relative-caret-position="232">
+              <caret line="130" column="26" selection-start-line="130" selection-start-column="26" selection-end-line="130" selection-end-column="26" />
               <folding>
                 <element signature="method#compareAllCases#0;class#Cases#0" expanded="false" />
                 <element signature="method#compareSimilarity#0;class#Cases#0" expanded="false" />
                 <element signature="method#compareSimilarityTest#0;class#Cases#0" expanded="false" />
                 <element signature="method#holidayTypeComparison#0;class#Cases#0" expanded="false" />
                 <element signature="method#priceComparison#0;class#Cases#0" expanded="false" />
-                <element signature="method#personNumberComparison#0;class#Cases#0" expanded="false" />
                 <element signature="method#regionComparison#0;class#Cases#0" expanded="false" />
                 <element signature="method#transportationComparison#0;class#Cases#0" expanded="false" />
                 <element signature="method#durationComparison#0;class#Cases#0" expanded="false" />
@@ -76,8 +76,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+            <state relative-caret-position="238">
+              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding>
                 <element signature="method#test1#0;class#Main#0" expanded="false" />
               </folding>
@@ -85,15 +85,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MyGUI.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MyGUI.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/MyGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="194" column="5" selection-start-line="194" selection-start-column="5" selection-end-line="194" selection-end-column="5" />
+            <state relative-caret-position="-2747">
+              <caret line="22" column="63" selection-start-line="21" selection-start-column="39" selection-end-line="22" selection-end-column="63" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#MyGUI#0;class#MyGUI#0" expanded="false" />
-                <element signature="class#4816:8119" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -121,14 +119,16 @@
       <list>
         <option value="$PROJECT_DIR$/src/com/company/Case.java" />
         <option value="$PROJECT_DIR$/src/com/company/MyGUI.java" />
-        <option value="$PROJECT_DIR$/src/com/company/Cases.java" />
         <option value="$PROJECT_DIR$/src/com/company/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Cases.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="980" />
-    <option name="height" value="1047" />
+    <option name="x" value="-1198" />
+    <option name="y" value="57" />
+    <option name="width" value="1075" />
+    <option name="height" value="1000" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -155,7 +155,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -195,8 +194,12 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager" selected="Application.Main">
     <configuration default="false" name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -489,8 +492,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="980" height="1047" extended-state="0" />
-    <editor active="true" />
+    <frame x="-1198" y="57" width="1075" height="1000" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -499,12 +502,12 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.46638206" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.49101123" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30217186" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -531,7 +534,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="3" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -540,6 +543,201 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/com/company/Case.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding>
+            <element signature="method#setupIndices#0;class#Case#0" expanded="false" />
+            <element signature="method#getTransportIndex#0;class#Case#0" expanded="false" />
+            <element signature="method#getSeasonIndex#0;class#Case#0" expanded="false" />
+            <element signature="method#getAccomodationIndex#0;class#Case#0" expanded="false" />
+            <element signature="method#getHolidayIndex#0;class#Case#0" expanded="false" />
+            <element signature="method#printCase#0;class#Case#0" expanded="false" />
+            <element signature="method#compareTo#0;class#Case#0" expanded="false" />
+            <element signature="method#toString#0;class#Case#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Cases.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="143" column="10" selection-start-line="143" selection-start-column="10" selection-end-line="143" selection-end-column="10" />
+          <folding>
+            <element signature="method#compareAllCases#0;class#Cases#0" expanded="false" />
+            <element signature="method#compareSimilarity#0;class#Cases#0" expanded="false" />
+            <element signature="method#compareSimilarityTest#0;class#Cases#0" expanded="false" />
+            <element signature="method#holidayTypeComparison#0;class#Cases#0" expanded="false" />
+            <element signature="method#priceComparison#0;class#Cases#0" expanded="false" />
+            <element signature="method#regionComparison#0;class#Cases#0" expanded="false" />
+            <element signature="method#transportationComparison#0;class#Cases#0" expanded="false" />
+            <element signature="method#durationComparison#0;class#Cases#0" expanded="false" />
+            <element signature="method#seasonComparison#0;class#Cases#0" expanded="false" />
+            <element signature="method#accomodationComparison#0;class#Cases#0" expanded="false" />
+            <element signature="method#ReadCases#0;class#Cases#0" expanded="false" />
+            <element signature="method#printThisLine#0;class#Cases#0" expanded="false" />
+            <element signature="method#cleanString#0;class#Cases#0" expanded="false" />
+            <element signature="method#giveStats#0;class#Cases#0" expanded="false" />
+            <element signature="method#addAccom#0;class#Cases#0" expanded="false" />
+            <element signature="method#addMonth#0;class#Cases#0" expanded="false" />
+            <element signature="method#addTransportation#0;class#Cases#0" expanded="false" />
+            <element signature="method#addRegion#0;class#Cases#0" expanded="false" />
+            <element signature="method#addType#0;class#Cases#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding>
+            <element signature="method#test1#0;class#Main#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/MyGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Case.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding>
+            <element signature="method#setupIndices#0;class#Case#0" expanded="false" />
+            <element signature="method#getTransportIndex#0;class#Case#0" expanded="false" />
+            <element signature="method#getSeasonIndex#0;class#Case#0" expanded="false" />
+            <element signature="method#getAccomodationIndex#0;class#Case#0" expanded="false" />
+            <element signature="method#getHolidayIndex#0;class#Case#0" expanded="false" />
+            <element signature="method#printCase#0;class#Case#0" expanded="false" />
+            <element signature="method#compareTo#0;class#Case#0" expanded="false" />
+            <element signature="method#toString#0;class#Case#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Cases.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="143" column="10" selection-start-line="143" selection-start-column="10" selection-end-line="143" selection-end-column="10" />
+          <folding>
+            <element signature="method#compareAllCases#0;class#Cases#0" expanded="false" />
+            <element signature="method#compareSimilarity#0;class#Cases#0" expanded="false" />
+            <element signature="method#compareSimilarityTest#0;class#Cases#0" expanded="false" />
+            <element signature="method#holidayTypeComparison#0;class#Cases#0" expanded="false" />
+            <element signature="method#priceComparison#0;class#Cases#0" expanded="false" />
+            <element signature="method#regionComparison#0;class#Cases#0" expanded="false" />
+            <element signature="method#transportationComparison#0;class#Cases#0" expanded="false" />
+            <element signature="method#durationComparison#0;class#Cases#0" expanded="false" />
+            <element signature="method#seasonComparison#0;class#Cases#0" expanded="false" />
+            <element signature="method#accomodationComparison#0;class#Cases#0" expanded="false" />
+            <element signature="method#ReadCases#0;class#Cases#0" expanded="false" />
+            <element signature="method#printThisLine#0;class#Cases#0" expanded="false" />
+            <element signature="method#cleanString#0;class#Cases#0" expanded="false" />
+            <element signature="method#giveStats#0;class#Cases#0" expanded="false" />
+            <element signature="method#addAccom#0;class#Cases#0" expanded="false" />
+            <element signature="method#addMonth#0;class#Cases#0" expanded="false" />
+            <element signature="method#addTransportation#0;class#Cases#0" expanded="false" />
+            <element signature="method#addRegion#0;class#Cases#0" expanded="false" />
+            <element signature="method#addType#0;class#Cases#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding>
+            <element signature="method#test1#0;class#Main#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/MyGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Case.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding>
+            <element signature="method#setupIndices#0;class#Case#0" expanded="false" />
+            <element signature="method#getTransportIndex#0;class#Case#0" expanded="false" />
+            <element signature="method#getSeasonIndex#0;class#Case#0" expanded="false" />
+            <element signature="method#getAccomodationIndex#0;class#Case#0" expanded="false" />
+            <element signature="method#getHolidayIndex#0;class#Case#0" expanded="false" />
+            <element signature="method#printCase#0;class#Case#0" expanded="false" />
+            <element signature="method#compareTo#0;class#Case#0" expanded="false" />
+            <element signature="method#toString#0;class#Case#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Cases.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="143" column="10" selection-start-line="143" selection-start-column="10" selection-end-line="143" selection-end-column="10" />
+          <folding>
+            <element signature="method#compareAllCases#0;class#Cases#0" expanded="false" />
+            <element signature="method#compareSimilarity#0;class#Cases#0" expanded="false" />
+            <element signature="method#compareSimilarityTest#0;class#Cases#0" expanded="false" />
+            <element signature="method#holidayTypeComparison#0;class#Cases#0" expanded="false" />
+            <element signature="method#priceComparison#0;class#Cases#0" expanded="false" />
+            <element signature="method#regionComparison#0;class#Cases#0" expanded="false" />
+            <element signature="method#transportationComparison#0;class#Cases#0" expanded="false" />
+            <element signature="method#durationComparison#0;class#Cases#0" expanded="false" />
+            <element signature="method#seasonComparison#0;class#Cases#0" expanded="false" />
+            <element signature="method#accomodationComparison#0;class#Cases#0" expanded="false" />
+            <element signature="method#ReadCases#0;class#Cases#0" expanded="false" />
+            <element signature="method#printThisLine#0;class#Cases#0" expanded="false" />
+            <element signature="method#cleanString#0;class#Cases#0" expanded="false" />
+            <element signature="method#giveStats#0;class#Cases#0" expanded="false" />
+            <element signature="method#addAccom#0;class#Cases#0" expanded="false" />
+            <element signature="method#addMonth#0;class#Cases#0" expanded="false" />
+            <element signature="method#addTransportation#0;class#Cases#0" expanded="false" />
+            <element signature="method#addRegion#0;class#Cases#0" expanded="false" />
+            <element signature="method#addType#0;class#Cases#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding>
+            <element signature="method#test1#0;class#Main#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/MyGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Case.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2295">
@@ -567,7 +765,6 @@
             <element signature="method#compareSimilarityTest#0;class#Cases#0" expanded="false" />
             <element signature="method#holidayTypeComparison#0;class#Cases#0" expanded="false" />
             <element signature="method#priceComparison#0;class#Cases#0" expanded="false" />
-            <element signature="method#personNumberComparison#0;class#Cases#0" expanded="false" />
             <element signature="method#regionComparison#0;class#Cases#0" expanded="false" />
             <element signature="method#transportationComparison#0;class#Cases#0" expanded="false" />
             <element signature="method#durationComparison#0;class#Cases#0" expanded="false" />
@@ -623,7 +820,6 @@
             <element signature="method#compareSimilarityTest#0;class#Cases#0" expanded="false" />
             <element signature="method#holidayTypeComparison#0;class#Cases#0" expanded="false" />
             <element signature="method#priceComparison#0;class#Cases#0" expanded="false" />
-            <element signature="method#personNumberComparison#0;class#Cases#0" expanded="false" />
             <element signature="method#regionComparison#0;class#Cases#0" expanded="false" />
             <element signature="method#transportationComparison#0;class#Cases#0" expanded="false" />
             <element signature="method#durationComparison#0;class#Cases#0" expanded="false" />
@@ -656,7 +852,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="158">
           <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../711/CDN/Client/Client.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/MyGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2747">
+          <caret line="22" column="63" selection-start-line="21" selection-start-column="39" selection-end-line="22" selection-end-column="63" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -677,17 +889,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding>
+            <element signature="method#test1#0;class#Main#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Cases.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="143" column="10" selection-start-line="143" selection-start-column="10" selection-end-line="143" selection-end-column="10" />
+        <state relative-caret-position="232">
+          <caret line="130" column="26" selection-start-line="130" selection-start-column="26" selection-end-line="130" selection-end-column="26" />
           <folding>
             <element signature="method#compareAllCases#0;class#Cases#0" expanded="false" />
             <element signature="method#compareSimilarity#0;class#Cases#0" expanded="false" />
             <element signature="method#compareSimilarityTest#0;class#Cases#0" expanded="false" />
             <element signature="method#holidayTypeComparison#0;class#Cases#0" expanded="false" />
             <element signature="method#priceComparison#0;class#Cases#0" expanded="false" />
-            <element signature="method#personNumberComparison#0;class#Cases#0" expanded="false" />
             <element signature="method#regionComparison#0;class#Cases#0" expanded="false" />
             <element signature="method#transportationComparison#0;class#Cases#0" expanded="false" />
             <element signature="method#durationComparison#0;class#Cases#0" expanded="false" />
@@ -702,28 +923,6 @@
             <element signature="method#addTransportation#0;class#Cases#0" expanded="false" />
             <element signature="method#addRegion#0;class#Cases#0" expanded="false" />
             <element signature="method#addType#0;class#Cases#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding>
-            <element signature="method#test1#0;class#Main#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/MyGUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="194" column="5" selection-start-line="194" selection-start-column="5" selection-end-line="194" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#MyGUI#0;class#MyGUI#0" expanded="false" />
-            <element signature="class#4816:8119" expanded="false" />
           </folding>
         </state>
       </provider>
