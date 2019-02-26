@@ -75,27 +75,16 @@ namespace CasedBasedReasoning
         {
             CaseInputGridVisible = true;
             ComparisonButtonText = "Find Relevant Cases";
-            HolidayTypes = new ObservableCollection<string>{"Active", "Bathing", "City", "Education",
-                "Language", "Recreation", "Skiing", "Wandering"};
-            Regions = new ObservableCollection<string>{"AdriaticSea","Allgaeu","Algarve","Alps","Atlantic","Attica",
-                "Balaton","Bavaria","BalticSea", "Belgium","BlackForest", "Bornholm",
-                "Brittany","Bulgaria", "Cairo","Carinthia","Chalkidiki", "Corfu","Corsica",
-                "CostaBlanca","CostaBrava", "CotedAzur","Crete","Czechia","Denmark","Egypt",
-                "England","ErzGebirge", "Fano","France","Fuerteventura", "GiantMountains",
-                "GranCanaria", "Harz","Holland","Ibiza","Ireland","LakeGarda", "Lolland",
-                "Madeira","Malta","Mallorca","Normandy", "NorthSea", "Poland","Riviera",
-                "Rhodes", "SalzbergerLand","Scotland","Slowakei","Styria","Sweden", "Teneriffe",
-                "Thuringia","Tunisia","TurkishAegeanSea", "TurkishRiviera", "Tyrol", "Wales"};
-            TransportationTypes = new ObservableCollection<string> { "Car", "Coach", "Plane", "Train" };
-            Seasons = new ObservableCollection<string>{"January", "February", "March", "April", "May", "June", "July", "August", "September",
-                "October", "November", "December"};
-            AccommodationTypes = new ObservableCollection<string>{"HolidayFlat", "OneStar", "TwoStars", "ThreeStars",
-                "FourStars", "FiveStars" };
+            HolidayTypes = new ObservableCollection<string>(TravelCaseBaseValues.HolidayTypes);
+            Regions = new ObservableCollection<string>(TravelCaseBaseValues.Regions);
+            TransportationTypes = new ObservableCollection<string>(TravelCaseBaseValues.TransportationTypes);
+            Seasons = new ObservableCollection<string>(TravelCaseBaseValues.Seasons);
+            AccommodationTypes = new ObservableCollection<string>(TravelCaseBaseValues.AccommodationTypes);
 
-            Price = "0";
-            NumberOfPeople = "1";
-            Duration = "1";
-            NumberCasesToView = "10";
+            Price = $"{TravelCaseBaseValues.DefaultPrice}";
+            NumberOfPeople = $"{TravelCaseBaseValues.DefaultNumberOfPeople}";
+            Duration = $"{TravelCaseBaseValues.DefaultDuration}";
+            NumberCasesToView = $"{TravelCaseBaseValues.DefaultCasesToView}";
             SelectedHoliday = HolidayTypes.First();
             SelectedRegion = Regions.First();
             SelectedTransportation = TransportationTypes.First();
@@ -111,7 +100,9 @@ namespace CasedBasedReasoning
         {
             get
             {
-                return _comparisonButtonCommand ?? (_comparisonButtonCommand = new RelayCommand(_ => CanCompare(), _ => ComparisonButtonPressed()));
+                return _comparisonButtonCommand ??
+                       (_comparisonButtonCommand = new RelayCommand(_ => CanCompare(),
+                           _ => ComparisonButtonPressed()));
             }
         }
 
@@ -122,41 +113,48 @@ namespace CasedBasedReasoning
 
         private void ComparisonButtonPressed()
         {
+            InputCase = GetInputCase();
+            CaseInputGridVisible = !CaseInputGridVisible;
             //Switch to results screen
+            ComparisonButtonText = CaseInputGridVisible ? "Find Relevant Cases" : "Input New Case";
+            _allCases.CompareCasesToInput(InputCase);
+            UpdateDisplayCases();
+        }
+
+        private void UpdateDisplayCases()
+        {
+            var numberOfCasesValid = int.TryParse(NumberCasesToView, out var numberOfCases);
+            if (!numberOfCasesValid)
+            {
+                numberOfCases = TravelCaseBaseValues.DefaultCasesToView;
+            }
+            var displayCases = _allCases.SortedCases.Take(numberOfCases);
+            AllCases.Clear();
+            foreach (var curCase in displayCases)
+            {
+                AllCases.Add(curCase);
+            }
+        }
+
+        private Case GetInputCase()
+        {
             var priceValid = int.TryParse(Price, out var price);
             if (!priceValid)
             {
-                price = 500;
+                price = TravelCaseBaseValues.DefaultPrice;
             }
             var numPeopleValid = int.TryParse(NumberOfPeople, out var numberPeople);
             if (!numPeopleValid)
             {
-                numberPeople = 1;
+                numberPeople = TravelCaseBaseValues.DefaultNumberOfPeople;
             }
             var durationValid = int.TryParse(Duration, out var duration);
             if (!durationValid)
             {
-                duration = 3;
+                duration = TravelCaseBaseValues.DefaultDuration;
             }
-            var numberOfCasesValid = int.TryParse(NumberCasesToView, out var numberOfCases);
-            if (!numberOfCasesValid)
-            {
-                numberOfCases = 10;
-            }
-            var inputCase = new Case(0, SelectedHoliday, price, numberPeople, SelectedRegion,
+            return new Case(0, SelectedHoliday, price, numberPeople, SelectedRegion,
                 SelectedTransportation, duration, SelectedSeason, SelectedAccommodation, "");
-            InputCase = inputCase;
-            CaseInputGridVisible = !CaseInputGridVisible;
-            ComparisonButtonText = CaseInputGridVisible ? "Find Relevant Cases" : "Input New Case";
-
-            _allCases.CompareAllCases(inputCase);
-            //Display relevant number of cases
-            var displayCases = _allCases.CaseList.Take(numberOfCases);
-            AllCases.Clear();
-            foreach(var curCase in displayCases)
-            {
-                AllCases.Add(curCase);
-            }
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

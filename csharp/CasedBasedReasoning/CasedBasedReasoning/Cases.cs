@@ -20,7 +20,7 @@ namespace CasedBasedReasoning
             ReadCases();
         }
 
-        public void CompareAllCases(Case inputCase)
+        public void CompareCasesToInput(Case inputCase)
         {
             var caseComparer = new CaseComparer(inputCase);
             foreach(var curCase in CaseList)
