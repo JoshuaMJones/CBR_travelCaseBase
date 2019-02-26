@@ -14,8 +14,8 @@ namespace CasedBasedReasoning
 
         public RelayCommand(Predicate<object> canExecute, Action<object> execute)
         {
-            this._canExecute = canExecute;
-            this._execute = execute;
+            _canExecute = canExecute;
+            _execute = execute;
         }
 
         public event EventHandler CanExecuteChanged

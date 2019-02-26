@@ -1,23 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Controls;
 using System.Windows.Input;
 
 namespace CasedBasedReasoning
 {
     public class ViewModel : INotifyPropertyChanged
     {
-        public ObservableCollection<string> HolidayTypes { get; private set; }
-        public ObservableCollection<string> Regions { get; private set; }
-        public ObservableCollection<string> TransportationTypes { get; private set; }
-        public ObservableCollection<string> Seasons { get; private set; }
-        public ObservableCollection<string> AccommodationTypes { get; private set; }
+        public ObservableCollection<string> HolidayTypes { get; }
+        public ObservableCollection<string> Regions { get; }
+        public ObservableCollection<string> TransportationTypes { get; }
+        public ObservableCollection<string> Seasons { get; }
+        public ObservableCollection<string> AccommodationTypes { get; }
 
         public string SelectedHoliday { get; set; }
         public string Price { get; set; }
@@ -30,6 +26,7 @@ namespace CasedBasedReasoning
         public string NumberCasesToView { get; set; }
 
         private bool _caseInputGridVisible;
+
         public bool CaseInputGridVisible {
             get
             {
@@ -40,7 +37,9 @@ namespace CasedBasedReasoning
                 NotifyPropertyChanged();
             }
         }
+
         private string _comparisonButtonText;
+
         public string ComparisonButtonText {
             get
             {
@@ -52,7 +51,9 @@ namespace CasedBasedReasoning
                 NotifyPropertyChanged();
             }
         }
+
         private Case _inputCase;
+
         public Case InputCase
         {
             get
@@ -68,7 +69,7 @@ namespace CasedBasedReasoning
 
         public ObservableCollection<Case> AllCases { get; set; } = new ObservableCollection<Case>();
 
-        private Cases _allCases;
+        private readonly Cases _allCases;
 
         public ViewModel()
         {
@@ -90,7 +91,7 @@ namespace CasedBasedReasoning
                 "October", "November", "December"};
             AccommodationTypes = new ObservableCollection<string>{"HolidayFlat", "OneStar", "TwoStars", "ThreeStars",
                 "FourStars", "FiveStars" };
-            
+
             Price = "0";
             NumberOfPeople = "1";
             Duration = "1";
@@ -102,20 +103,15 @@ namespace CasedBasedReasoning
             SelectedAccommodation = AccommodationTypes.First();
 
             _allCases = new Cases();
-            _allCases.ReadCases();
         }
 
         private ICommand _comparisonButtonCommand;
-        
+
         public ICommand ComparisonButtonCommand
         {
             get
             {
-                if(_comparisonButtonCommand == null)
-                {
-                    _comparisonButtonCommand = new RelayCommand(p => CanCompare(), p => ComparisonButtonPressed());
-                }
-                return _comparisonButtonCommand;
+                return _comparisonButtonCommand ?? (_comparisonButtonCommand = new RelayCommand(_ => CanCompare(), _ => ComparisonButtonPressed()));
             }
         }
 
@@ -123,59 +119,48 @@ namespace CasedBasedReasoning
         {
             return true;
         }
-        
+
         private void ComparisonButtonPressed()
         {
             //Switch to results screen
-            var priceValid = Int32.TryParse(Price, out int price);
+            var priceValid = int.TryParse(Price, out var price);
             if (!priceValid)
             {
                 price = 500;
             }
-            var numPeopleValid = Int32.TryParse(NumberOfPeople, out int numberPeople);
+            var numPeopleValid = int.TryParse(NumberOfPeople, out var numberPeople);
             if (!numPeopleValid)
             {
                 numberPeople = 1;
             }
-            var durationValid = Int32.TryParse(Duration, out int duration);
+            var durationValid = int.TryParse(Duration, out var duration);
             if (!durationValid)
             {
                 duration = 3;
             }
-            var numberOfCasesValid = Int32.TryParse(NumberCasesToView, out int numberOfCases);
+            var numberOfCasesValid = int.TryParse(NumberCasesToView, out var numberOfCases);
             if (!numberOfCasesValid)
             {
                 numberOfCases = 10;
             }
-            var inputCase = new Case() {
-                HolidayType = SelectedHoliday,
-                Region = SelectedRegion,
-                Transportation = SelectedTransportation,
-                Season = SelectedSeason,
-                Accommodation = SelectedAccommodation,
-                Price = price,
-                NumPerson = numberPeople,
-                Duration = duration
-            };
-            inputCase.SetupIndices();
+            var inputCase = new Case(0, SelectedHoliday, price, numberPeople, SelectedRegion,
+                SelectedTransportation, duration, SelectedSeason, SelectedAccommodation, "");
             InputCase = inputCase;
             CaseInputGridVisible = !CaseInputGridVisible;
-            if (CaseInputGridVisible)
-                ComparisonButtonText = "Find Relevant Cases";
-            else
-                ComparisonButtonText = "Input New Case";
+            ComparisonButtonText = CaseInputGridVisible ? "Find Relevant Cases" : "Input New Case";
 
             _allCases.CompareAllCases(inputCase);
             //Display relevant number of cases
             var displayCases = _allCases.CaseList.Take(numberOfCases);
             AllCases.Clear();
-            foreach(Case curCase in displayCases)
+            foreach(var curCase in displayCases)
             {
                 AllCases.Add(curCase);
             }
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
+
         private void NotifyPropertyChanged([CallerMemberName] String propertyName = "")
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));

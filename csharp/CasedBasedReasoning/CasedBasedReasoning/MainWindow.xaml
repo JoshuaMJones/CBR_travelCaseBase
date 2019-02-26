@@ -3,13 +3,14 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:CasedBasedReasoning"
         mc:Ignorable="d"
-        Title="Case Based Reasoner" Height="420" Width="525">
+        xmlns:local="clr-namespace:CasedBasedReasoning"
+        d:DataContext="{d:DesignInstance local:ViewModel}"
+        Title="Case Based Reasoner" Height="450" Width="500">
     <Window.Resources>
         <BooleanToVisibilityConverter x:Key="BoolToVis"/>
     </Window.Resources>
-    <Grid Height="390" VerticalAlignment="Bottom">
+    <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="35"/>
@@ -31,14 +32,14 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <TextBlock HorizontalAlignment="Center" Grid.Row="0" TextWrapping="Wrap" Text="Holiday Types" VerticalAlignment="Center"/>
-            <TextBlock HorizontalAlignment="Center" Grid.Row="1" TextWrapping="Wrap" Text="Price" VerticalAlignment="Center"/>
-            <TextBlock HorizontalAlignment="Center" Grid.Row="2" TextWrapping="Wrap" Text="Number of People" VerticalAlignment="Center"/>
-            <TextBlock HorizontalAlignment="Center" Grid.Row="3" TextWrapping="Wrap" Text="Duration" VerticalAlignment="Center"/>
-            <TextBlock HorizontalAlignment="Center" Grid.Row="4" TextWrapping="Wrap" Text="Region" VerticalAlignment="Center"/>
-            <TextBlock HorizontalAlignment="Center" Grid.Row="5" TextWrapping="Wrap" Text="Transportation Type" VerticalAlignment="Center"/>
-            <TextBlock HorizontalAlignment="Center" Grid.Row="6" TextWrapping="Wrap" Text="Season" VerticalAlignment="Center"/>
-            <TextBlock HorizontalAlignment="Center" Grid.Row="7" TextWrapping="Wrap" Text="Accommodation" VerticalAlignment="Center"/>
-            <TextBlock HorizontalAlignment="Center" Grid.Row="8" TextWrapping="Wrap" Text="Cases to View" VerticalAlignment="Center"/>
+            <TextBlock HorizontalAlignment="Center" Grid.Row="1" Grid.Column="0" TextWrapping="Wrap" Text="Price" VerticalAlignment="Center"/>
+            <TextBlock HorizontalAlignment="Center" Grid.Row="2" Grid.Column="0" TextWrapping="Wrap" Text="Number of People" VerticalAlignment="Center"/>
+            <TextBlock HorizontalAlignment="Center" Grid.Row="3" Grid.Column="0" TextWrapping="Wrap" Text="Duration" VerticalAlignment="Center"/>
+            <TextBlock HorizontalAlignment="Center" Grid.Row="4" Grid.Column="0" TextWrapping="Wrap" Text="Region" VerticalAlignment="Center"/>
+            <TextBlock HorizontalAlignment="Center" Grid.Row="5" Grid.Column="0" TextWrapping="Wrap" Text="Transportation Type" VerticalAlignment="Center"/>
+            <TextBlock HorizontalAlignment="Center" Grid.Row="6" Grid.Column="0" TextWrapping="Wrap" Text="Season" VerticalAlignment="Center"/>
+            <TextBlock HorizontalAlignment="Center" Grid.Row="7" Grid.Column="0" TextWrapping="Wrap" Text="Accommodation" VerticalAlignment="Center"/>
+            <TextBlock HorizontalAlignment="Center" Grid.Row="8" Grid.Column="0" TextWrapping="Wrap" Text="Cases to View" VerticalAlignment="Center"/>
             <ComboBox HorizontalAlignment="Center" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" Width="120" ItemsSource="{Binding HolidayTypes}" SelectedValue="{Binding SelectedHoliday}"/>
             <TextBox HorizontalAlignment="Center" Grid.Row="1" Grid.Column="1" Height="23" TextWrapping="Wrap" Text="{Binding Price}" VerticalAlignment="Center" Width="120"/>
             <TextBox HorizontalAlignment="Center" Grid.Row="2" Grid.Column="1" Height="23" TextWrapping="Wrap" Text="{Binding NumberOfPeople}" VerticalAlignment="Center" Width="120"/>
@@ -61,11 +62,19 @@
                 </Style>
             </Grid.Style>
             <Grid.RowDefinitions>
-                <RowDefinition MaxHeight="160"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <TextBlock VerticalAlignment="Bottom" TextAlignment="Left" Grid.Row="0" Text="{Binding InputCase}"/>
-            <ListBox ScrollViewer.CanContentScroll="False" Grid.Row="1" ItemsSource="{Binding AllCases}"/>
+            <TextBlock Grid.Row="0" Text="Input Holiday:" TextAlignment="Center"/>
+            <Line Grid.Row="1" Stretch="Fill" Stroke="Black" X2="1"/>
+            <TextBlock Grid.Row="2" Text="{Binding InputCase}"/>
+            <Line Grid.Row="3" Stretch="Fill" Stroke="Black" X2="1"/>
+            <TextBlock Grid.Row="4" Text="Holidays by Similarity:" TextAlignment="Center"/>
+            <ListBox ScrollViewer.CanContentScroll="False" Grid.Row="5" ItemsSource="{Binding AllCases}"/>
         </Grid>
         <Grid Grid.Row="1">
             <Button Content="{Binding ComparisonButtonText}" HorizontalAlignment="Center" Width="120" Command="{Binding ComparisonButtonCommand}"/>
