@@ -125,10 +125,11 @@ namespace CasedBasedReasoning
 
         private void ComparisonButtonPressed()
         {
-            InputCase = GetInputCase();
             CaseInputGridVisible = !CaseInputGridVisible;
-            //Switch to results screen
             ComparisonButtonText = CaseInputGridVisible ? "Find Relevant Cases" : "Input New Case";
+            if (CaseInputGridVisible)
+                return;
+            InputCase = GetInputCase();
             _allCases.CompareCasesToInput(InputCase);
             UpdateDisplayCases();
         }
