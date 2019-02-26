@@ -1,18 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CasedBasedReasoning
 {
     public class Case : IComparable
     {
-        public int JourneyCode;
+        private readonly int _journeyCode;
         public string HolidayType;
         public int HolidayTypeIndex;
         public int Price;
-        public int NumPerson;
+        public int NumberOfPeople;
         public string Region;
         public string Transportation;
         public int TransportationIndex;
@@ -24,7 +20,23 @@ namespace CasedBasedReasoning
         public string Hotel;
         public double Similarity;
 
-        public void SetupIndices()
+        public Case(int journeyCode, string holidayType, int price, int numberOfPeople, string region, string transportation,
+            int duration, string season, string accommodation, string hotel)
+        {
+            _journeyCode = journeyCode;
+            HolidayType = holidayType;
+            Price = price;
+            NumberOfPeople = numberOfPeople;
+            Region = region;
+            Transportation = transportation;
+            Duration = duration;
+            Season = season;
+            Accommodation = accommodation;
+            Hotel = hotel;
+            SetupIndices();
+        }
+
+        private void SetupIndices()
         {
             HolidayTypeIndex = GetHolidayIndex(HolidayType);
             TransportationIndex = GetTransportationIndex(Transportation);
@@ -38,26 +50,28 @@ namespace CasedBasedReasoning
             {
                 return 0;
             }
-            else if (accommodation.Equals("OneStar"))
+
+            if (accommodation.Equals("OneStar"))
             {
                 return 1;
             }
-            else if (accommodation.Equals("TwoStars"))
+
+            if (accommodation.Equals("TwoStars"))
             {
                 return 2;
             }
-            else if (accommodation.Equals("ThreeStars"))
+
+            if (accommodation.Equals("ThreeStars"))
             {
                 return 3;
             }
-            else if (accommodation.Equals(("FourStars")))
+
+            if (accommodation.Equals("FourStars"))
             {
                 return 4;
             }
-            else
-            {
-                return 5;
-            }
+
+            return 5;
         }
 
         private int GetSeasonIndex(string season)
@@ -66,50 +80,58 @@ namespace CasedBasedReasoning
             {
                 return 1;
             }
-            else if (season.Equals("February"))
+
+            if (season.Equals("February"))
             {
                 return 2;
             }
-            else if (season.Equals("March"))
+
+            if (season.Equals("March"))
             {
                 return 3;
             }
-            else if (season.Equals("April"))
+
+            if (season.Equals("April"))
             {
                 return 4;
             }
-            else if (season.Equals("May"))
+
+            if (season.Equals("May"))
             {
                 return 5;
             }
-            else if (season.Equals("June"))
+
+            if (season.Equals("June"))
             {
                 return 6;
             }
-            else if (season.Equals("July"))
+
+            if (season.Equals("July"))
             {
                 return 7;
             }
-            else if (season.Equals("August"))
+
+            if (season.Equals("August"))
             {
                 return 8;
             }
-            else if (season.Equals("September"))
+
+            if (season.Equals("September"))
             {
                 return 9;
             }
-            else if (season.Equals("October"))
+
+            if (season.Equals("October"))
             {
                 return 10;
             }
-            else if (season.Equals("November"))
+
+            if (season.Equals("November"))
             {
                 return 11;
             }
-            else
-            {
-                return 12;
-            }
+
+            return 12;
         }
 
         private int GetTransportationIndex(string type)
@@ -118,18 +140,18 @@ namespace CasedBasedReasoning
             {
                 return 0;
             }
-            else if (type.Equals("Car"))
+
+            if (type.Equals("Car"))
             {
                 return 1;
             }
-            else if (type.Equals("Train"))
+
+            if (type.Equals("Train"))
             {
                 return 2;
             }
-            else
-            {
-                return 3;
-            }
+
+            return 3;
         }
 
         private int GetHolidayIndex(string holiday)
@@ -138,78 +160,59 @@ namespace CasedBasedReasoning
             {
                 return 0;
             }
-            else if (holiday.Equals("City"))
+
+            if (holiday.Equals("City"))
             {
                 return 3;
             }
-            else if (holiday.Equals("Wandering"))
+
+            if (holiday.Equals("Wandering"))
             {
                 return 6;
             }//Second group
-            else if (holiday.Equals("Active"))
+
+            if (holiday.Equals("Active"))
             {
                 return 1;
             }
-            else if (holiday.Equals("Recreation"))
+
+            if (holiday.Equals("Recreation"))
             {
                 return 4;
             }
-            else if (holiday.Equals("Skiing"))
+
+            if (holiday.Equals("Skiing"))
             {
                 return 7;
             }//Third group
-            else if (holiday.Equals("Education"))
+
+            if (holiday.Equals("Education"))
             {
                 return 2;
             }
             return 5;
         }
 
-        public void printCase()
-        {
-            Console.WriteLine("Case: " + JourneyCode);
-            Console.WriteLine(HolidayType);
-            Console.WriteLine(Price);
-            Console.WriteLine(NumPerson);
-            Console.WriteLine(Region);
-            Console.WriteLine(Transportation);
-            Console.WriteLine(Duration);
-            Console.WriteLine(Season);
-            Console.WriteLine(Accommodation);
-            Console.WriteLine(Hotel);
-            Console.WriteLine("similarity: " + Similarity + "\n");
-
-        }
-
-        public int CompareTo(Case other)
-        {
-            if (Similarity == other.Similarity)
-            {
-                return 0;
-            }
-            return Similarity < other.Similarity ? 1 : -1;
-        }
-
         public override string ToString()
         {
-            string output = "";
-            if (JourneyCode != 0)
+            var output = "";
+            if (_journeyCode != 0)
             {
-                output += "Journey Code: " + JourneyCode + "\n";
+                output += "Journey Code: " + _journeyCode + "\n";
             }
             output += "Holiday Type: " + HolidayType + "\n";
             output += "Price: " + Price + "\n";
-            output += "Number of People: " + NumPerson + "\n";
+            output += "Number of People: " + NumberOfPeople + "\n";
             output += "Region: " + Region + "\n";
             output += "Transportation: " + Transportation + "\n";
             output += "Duration: " + Duration + "\n";
             output += "Season: " + Season + "\n";
-            output += "Accomodation: " + Accommodation + "\n";
+            output += "Accommodation: " + Accommodation + "\n";
             if (Hotel != null)
             {
                 output += "Hotel: " + Hotel + "\n";
             }
-            if (Similarity != 0)
+            if (Math.Abs(Similarity) > 0.0001)
             {
                 output += "Similarity: " + Similarity + "\n";
             }
@@ -219,13 +222,10 @@ namespace CasedBasedReasoning
 
         public int CompareTo(object obj)
         {
-            var other = obj as Case;
-            if (other == null)
+            if (!(obj is Case other))
                 return 0;
-            if (Similarity == other.Similarity)
-            {
+            if (Math.Abs(Similarity - other.Similarity) < 0.00001)
                 return 0;
-            }
             return Similarity < other.Similarity ? 1 : -1;
         }
     }
