@@ -3,12 +3,15 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Runtime.CompilerServices;
+using System.Windows;
 using System.Windows.Input;
 
 namespace CasedBasedReasoning
 {
     public class ViewModel : INotifyPropertyChanged
     {
+        public bool SetupCorrect = true;
+
         public ObservableCollection<string> HolidayTypes { get; }
         public ObservableCollection<string> Regions { get; }
         public ObservableCollection<string> TransportationTypes { get; }
@@ -73,8 +76,19 @@ namespace CasedBasedReasoning
 
         public ViewModel()
         {
+            var caseReader = new CaseBaseReader();
+            var casesFromFile = caseReader.ReadCases();
+            if (casesFromFile == null)
+            {
+                MessageBox.Show("Error reading from travel case base, please ensure file 'TRAVEL.csv' is located in the exe directory", "Error Message");
+                SetupCorrect = false;
+                return;
+            }
+
+            _allCases = casesFromFile;
             CaseInputGridVisible = true;
             ComparisonButtonText = "Find Relevant Cases";
+
             HolidayTypes = new ObservableCollection<string>(TravelCaseBaseValues.HolidayTypes);
             Regions = new ObservableCollection<string>(TravelCaseBaseValues.Regions);
             TransportationTypes = new ObservableCollection<string>(TravelCaseBaseValues.TransportationTypes);
@@ -90,8 +104,6 @@ namespace CasedBasedReasoning
             SelectedTransportation = TransportationTypes.First();
             SelectedSeason = Seasons.First();
             SelectedAccommodation = AccommodationTypes.First();
-
-            _allCases = new Cases();
         }
 
         private ICommand _comparisonButtonCommand;
